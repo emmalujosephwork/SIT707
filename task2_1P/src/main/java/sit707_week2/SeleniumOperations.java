@@ -17,7 +17,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * This class demonstrates Selenium locator APIs to identify HTML elements.
  * 
- * @author Ahsan Habib
+ * @author Emmalu joseph
  */
 public class SeleniumOperations {
 
