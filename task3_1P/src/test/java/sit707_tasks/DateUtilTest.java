@@ -8,13 +8,13 @@ public class DateUtilTest {
 
     @Test
     public void testStudentIdentity() {
-        String studentId = "123456789"; // Replace with your ID
+        String studentId = "224791713"; // Replace with your ID
         Assert.assertNotNull("Student ID is null", studentId);
     }
 
     @Test
     public void testStudentName() {
-        String studentName = "Your Name"; // Replace with your name
+        String studentName = "Emmalu Joseph"; // Replace with your name
         Assert.assertNotNull("Student name is null", studentName);
     }
 
