@@ -8,7 +8,7 @@ public class TaskServiceTest {
         TaskService service = new TaskService();
         Task task = service.submitTask("s101", "Assignment 1 content");
 
-        assertEquals("s101", task.getStudentId());
+        assertEquals("wrongId", task.getStudentId()); // wrong on purpose
         assertNotNull(task.getTimestamp());
         assertEquals("Assignment 1 content", task.getContent());
     }
