@@ -1,9 +1,6 @@
 package sit707_week4;
 
-/**
- * Encapsulates login status and message.
- * @author Ahsan Habib
- */
+
 public class LoginStatus {
 
 	private boolean loginSuccess = false;

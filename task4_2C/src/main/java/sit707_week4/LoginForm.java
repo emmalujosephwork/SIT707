@@ -1,9 +1,5 @@
 package sit707_week4;
 
-/**
- * Authenticates user based on username, password and validation code.
- * @author Ahsan Habib
- */
 public class LoginForm {
 	private static String USERNAME = "ahsan";
 	private static String PASSWORD = "ahsan_pass";
