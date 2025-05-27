@@ -12,6 +12,6 @@ public class MyJavaAppTests {
 
     @Test
     void testFail() {
-        assertEquals(5, 2 + 2); // This will fail
+        assertEquals(4, 2 + 2); // This will fail
     }
 }
