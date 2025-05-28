@@ -1,0 +1,28 @@
+steps:
+- name: 'gcr.io/cloud-builders/mvn'
+  dir: 'myjavaapp'              # Run Maven inside myjavaapp folder
+  args: ['clean', 'install']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '-t', 'gcr.io/$PROJECT_ID/myjavaapp',
+    '-f', 'myjavaapp/Dockerfile',  # Point to Dockerfile inside myjavaapp
+    'myjavaapp'                    # Set build context to myjavaapp folder
+  ]
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/myjavaapp']
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: [
+    'run', 'deploy', 'myjavaapp',
+    '--image', 'gcr.io/$PROJECT_ID/myjavaapp',
+    '--platform', 'managed',
+    '--region', 'us-central1',
+    '--allow-unauthenticated'
+  ]
+
+options:
+  logging: CLOUD_LOGGING_ONLY

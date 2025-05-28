@@ -14,6 +14,12 @@ public class MyJavaApp {
 
     @GetMapping("/")
     public String home() {
-        return "Hello from Spring Boot!";
+        return "<html>" +
+               "<head><title>Welcome</title></head>" +
+               "<body style='font-family:Arial, sans-serif; text-align:center; margin-top:50px;'>" +
+               "<h1>Hello from Spring Boot!</h1>" +
+               "<p>Welcome to my simple web app.</p>" +
+               "</body>" +
+               "</html>";
     }
 }
