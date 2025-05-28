@@ -23,4 +23,10 @@ public class MyJavaAppTests {
         assertThat(body).contains("Hello from Spring Boot!");
         assertThat(body).contains("<h1>");
     }
+
+    @Test
+    void homeReturnsHttpStatusOk() {
+        var response = this.restTemplate.getForEntity("/", String.class);
+        assertThat(response.getStatusCodeValue()).isEqualTo(200);
+    }
 }
