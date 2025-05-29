@@ -17,7 +17,7 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args: [
-    'run', 'deploy', 'myjavaapp',
+    'run', 'deploy', 'myjavaapp1',
     '--image', 'gcr.io/$PROJECT_ID/myjavaapp1',
     '--platform', 'managed',
     '--region', 'us-central1',
