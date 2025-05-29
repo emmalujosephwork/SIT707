@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Tell Docker (and Cloud Run) which port we’ll listen on
-EXPOSE 8080
+EXPOSE 8081
 
 # Copy the fat-jar built by Maven into the image
 COPY target/*.jar app.jar
