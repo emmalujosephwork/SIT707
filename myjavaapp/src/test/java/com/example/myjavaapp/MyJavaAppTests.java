@@ -29,4 +29,11 @@ public class MyJavaAppTests {
         var response = this.restTemplate.getForEntity("/", String.class);
         assertThat(response.getStatusCodeValue()).isEqualTo(200);
     }
+
+    // This test is intentionally designed to fail
+    @Test
+    void homeReturnsUnexpectedMessage() {
+        String body = this.restTemplate.getForObject("/", String.class);
+        assertThat(body).contains("This message will never appear");
+    }
 }
