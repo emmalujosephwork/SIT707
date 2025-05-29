@@ -19,7 +19,7 @@ public class MyJavaApp {
                "<body style='font-family:Arial, sans-serif; text-align:center; margin-top:50px;'>" +
                "<h1>Hello from Spring Boot!</h1>" +
                "<p>Welcome User to my simple web app.</p>" +
-               "<p>Testing Another Application Base.</p>" +
+               "<p>Testing Another Application Base Old.</p>" +
                "</body>" +
                "</html>";
     }
